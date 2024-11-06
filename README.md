@@ -1,144 +1,65 @@
 <p align="center">
   <a href="https://chat.taccso.com">
-    <img src="/assets/taccso-removebg.png" height="256">
+    <img src="https://raw.githubusercontent.com/ayushkmr/TAccSo/main/client/public/assets/taccso.jpg" height="256">
   </a>
   <h1 align="center">
     <a href="https://chat.taccso.com">TAccSo</a>
   </h1>
 </p>
 
-<p align="center">
-  <a href="https://discord.chat.taccso.com"> 
-    <img
-      src="https://img.shields.io/discord/1086345563026489514?label=&logo=discord&style=for-the-badge&logoWidth=20&logoColor=white&labelColor=000000&color=blueviolet">
-  </a>
-  <a href="https://www.youtube.com/@TAccSo"> 
-    <img
-      src="https://img.shields.io/badge/YOUTUBE-red.svg?style=for-the-badge&logo=youtube&logoColor=white&labelColor=000000&logoWidth=20">
-  </a>
-  <a href="https://docs.chat.taccso.com"> 
-    <img
-      src="https://img.shields.io/badge/DOCS-blue.svg?style=for-the-badge&logo=read-the-docs&logoColor=white&labelColor=000000&logoWidth=20">
-  </a>
-  <a aria-label="Sponsors" href="https://github.com/sponsors/ayushkmr">
-    <img
-      src="https://img.shields.io/badge/SPONSORS-brightgreen.svg?style=for-the-badge&logo=github-sponsors&logoColor=white&labelColor=000000&logoWidth=20">
-  </a>
-</p>
 
-<p align="center">
-<a href="https://railway.app/template/b5k2mn?referralCode=HI9hWz">
-  <img src="https://railway.app/button.svg" alt="Deploy on Railway" height="30">
-</a>
-<a href="https://zeabur.com/templates/0X2ZY8">
-  <img src="https://zeabur.com/button.svg" alt="Deploy on Zeabur" height="30"/>
-</a>
-<a href="https://template.cloud.sealos.io/deploy?templateName=taccso">
-  <img src="https://raw.githubusercontent.com/labring-actions/templates/main/Deploy-on-Sealos.svg" alt="Deploy on Sealos" height="30">
-</a>
-</p>
+## 🌟 About TAccSo
 
-# 📃 Features
+### Vision
+Our vision is to revolutionize the way professionals interact with all tax and accounting-related communications and correspondence, eliminating inefficiencies and manual processes. By starting with tax practitioners and accountants, we aim to create a seamless, automated solution that simplifies complex workflows, ensuring timely communication and task management. Our broader goal is to expand this transformation to all professional services, enabling professionals to focus on delivering value to their clients while increasing efficiency and reducing errors.
 
-- 🖥️ UI matching ChatGPT, including Dark mode, Streaming, and latest updates
-- 🤖 AI model selection:
-  - Anthropic (Claude), AWS Bedrock, OpenAI, Azure OpenAI, BingAI, ChatGPT, Google Vertex AI, Plugins, Assistants API (including Azure Assistants)
-- ✅ Compatible across both **[Remote & Local AI services](https://www.chat.taccso.com/docs/configuration/taccso_yaml/ai_endpoints):**
-  - groq, Ollama, Cohere, Mistral AI, Apple MLX, koboldcpp, OpenRouter, together.ai, Perplexity, ShuttleAI, and more
-- 🪄 Generative UI with **[Code Artifacts](https://youtu.be/GfTj7O4gmd0?si=WJbdnemZpJzBrJo3)**
-   - Create React, HTML code, and Mermaid diagrams right in chat
-- 💾 Create, Save, & Share Custom Presets
-- 🔀 Switch between AI Endpoints and Presets, mid-chat
-- 🔄 Edit, Resubmit, and Continue Messages with Conversation branching
-- 🌿 Fork Messages & Conversations for Advanced Context control
-- 💬 Multimodal Chat:
-    - Upload and analyze images with Claude 3, GPT-4 (including `gpt-4o` and `gpt-4o-mini`), and Gemini Vision 📸
-    - Chat with Files using Custom Endpoints, OpenAI, Azure, Anthropic, & Google. 🗃️
-    - Advanced Agents with Files, Code Interpreter, Tools, and API Actions 🔦
-      - Available through the [OpenAI Assistants API](https://platform.openai.com/docs/assistants/overview) 🌤️
-      - Non-OpenAI Agents in Active Development 🚧
-- 🌎 Multilingual UI:
-  - English, 中文, Deutsch, Español, Français, Italiano, Polski, Português Brasileiro,
-  - Русский, 日本語, Svenska, 한국어, Tiếng Việt, 繁體中文, العربية, Türkçe, Nederlands, עברית
-- 🎨 Customizable Dropdown & Interface: Adapts to both power users and newcomers
-- 📧 Verify your email to ensure secure access
-- 🗣️ Chat hands-free with Speech-to-Text and Text-to-Speech magic
-  - Automatically send and play Audio
-  - Supports OpenAI, Azure OpenAI, and Elevenlabs
-- 📥 Import Conversations from TAccSo, ChatGPT, Chatbot UI
-- 📤 Export conversations as screenshots, markdown, text, json
-- 🔍 Search all messages/conversations
-- 🔌 Plugins, including web access, image generation with DALL-E-3 and more
-- 👥 Multi-User, Secure Authentication with Moderation and Token spend tools
-- ⚙️ Configure Proxy, Reverse Proxy, Docker, & many Deployment options:
-  - Use completely local or deploy on the cloud
-- 📖 Completely Open-Source & Built in Public
-- 🧑‍🤝‍🧑 Community-driven development, support, and feedback
+### Mission
+Our mission is to rapidly develop and refine solutions that automate the handling of all tax and accounting-related communications, starting with documents. By closely collaborating with tax practitioners and accountants, we will quickly adapt and pivot based on their needs, ensuring our product evolves to simplify workflows and enhance communication. As we experiment and learn, we remain focused on delivering real value to our users, with the long-term goal of expanding our solution to all professional services.
 
-[For a thorough review of our features, see our docs here](https://docs.chat.taccso.com/) 📚
+### Company Values
 
-## 🪶 All-In-One AI Conversations with TAccSo
+#### Customer Obsession
+We are not competitor-obsessed, we are customer-obsessed. Our mission starts and ends with our customers. We earn their trust every day by listening closely, anticipating their needs, and delivering solutions that make their lives easier. As we move fast, test, and pivot, everything we do is to create seamless, efficient experiences for tax practitioners, accountants, and all professional services.
 
-TAccSo brings together the future of assistant AIs with the revolutionary technology of OpenAI's ChatGPT. Celebrating the original styling, TAccSo gives you the ability to integrate multiple AI models. It also integrates and enhances original client features such as conversation and message search, prompt templates and plugins.
+#### Take Ownership
+Leaders at our company act like owners. They take responsibility for the success of our product and the satisfaction of our customers. If there’s a problem, we don’t pass the buck- we fix it. We never say, ‘That’s not my job,’ because the success of our vision depends on everyone taking initiative and solving problems.
 
-With TAccSo, you no longer need to opt for ChatGPT Plus and can instead use free or pay-per-call APIs. We welcome contributions, cloning, and forking to enhance the capabilities of this advanced chatbot platform.
+#### Invent and Simplify
+At our core, we are builders. We strive to invent and simplify complex processes that burden professionals in tax, accounting, and beyond. By breaking down the problems our customers face, we create simple, elegant solutions that reduce complexity, improve efficiency, and help our users focus on what matters most.
 
-[![Watch the video](https://raw.githubusercontent.com/LibreChat-AI/librechat.ai/main/public/images/changelog/v0.7.5.png)](https://www.youtube.com/watch?v=IDukQ7a2f3U)
-Click on the thumbnail to open the video☝️
+#### Bias for Action
+Speed matters in business. We believe in taking bold steps quickly, iterating fast, and adjusting as we go. We don’t wait for perfect conditions to act. Our approach is rooted in rapid experimentation—getting out there, learning from our customers, and pivoting when necessary, all while keeping our vision in sight.
 
----
+#### Learn and Be Curious
+We are never done learning and always seek to improve. Whether it's by diving into customer feedback or experimenting with new ideas, curiosity drives us forward. Our curiosity fuels our innovation, leading us to develop solutions that reshape entire industries, starting with tax and accounting professionals.
 
-## 🌐 Resources
+#### Deliver Results
+We are results-driven. It’s not about how hard we work—it’s about what we deliver. Our customers depend on us to help them simplify their workflows and stay ahead of their challenges. We measure ourselves not by effort, but by the impact we create for our users, ensuring we build trust and deliver tangible results.
 
-**GitHub Repo:**
-  - **RAG API:** [github.com/ayushkmr/rag_api](https://github.com/ayushkmr/rag_api)
-  - **Website:** [github.com/ayushkmr/TAccSo](https://github.com/ayushkmr/TAccSo)
+#### Frugality
+We do more with less. Constraints breed resourcefulness, self-sufficiency, and invention. We don’t throw money at problems; we solve them with ingenuity. This lean approach drives us to be efficient and focus on providing maximum value to our customers at the lowest cost.
 
-**Other:**
-  - **Website:** [chat.taccso.com](https://chat.taccso.com)
-  - **Documentation:** [docs.chat.taccso.com](https://docs.chat.taccso.com)
-  - **Blog:** [blog.chat.taccso.com](https://docs.chat.taccso.com)
+#### High Standards
+Leaders at our company maintain relentlessly high standards. We challenge ourselves and our teams to raise the bar, continually pushing the boundaries of what’s possible. Our vision demands nothing less than excellence, and we never settle for good enough—especially when it comes to the customer experience.
 
----
+#### Think Big
+Thinking small is a self-fulfilling prophecy. Our vision is to revolutionize entire industries, and that requires thinking big. We push ourselves to dream bigger, imagine bolder futures, and challenge conventional thinking. Starting with tax and accounting professionals, we aim to change how entire professional services operate.
 
-## 📝 Changelog
+#### Earn Trust
+We earn the trust of our customers, partners, and teams by delivering on our promises and holding ourselves accountable. We communicate openly and act with integrity. Trust is the foundation upon which we build lasting relationships, and we work tirelessly to protect it.
 
-Keep up with the latest updates by visiting the releases page and notes:
-- [Releases](https://github.com/ayushkmr/TAccSo/releases)
-- [Changelog](https://www.chat.taccso.com/changelog) 
+### Find the “Why” in Your Work
 
-**⚠️ Please consult the [changelog](https://www.chat.taccso.com/changelog) for breaking changes before updating.**
+1. **Why are you doing this?** It is easy to focus on tasks without questioning their purpose. Reflect on why you are working on a specific task. Who benefits from it, and what is the motivation behind it? Understanding the purpose can lead to better engagement and alignment with the team's goals.
 
----
+2. **What problem are you solving?** Clarify the issue you are addressing. Are customers confused? Is there a gap that needs to be filled? Sometimes, the problem may not be real or significant, which signals that it is time to reevaluate the task. Focus on solving real, impactful problems.
 
-## ⭐ Star History
+3. **Is this actually useful?** Differentiate between enthusiasm and usefulness. While creating something exciting can be fun, ultimately, the outcome should be valuable. Ask yourself if the work you are doing will have lasting utility or if it is just “cool” in the short term.
 
-<p align="center">
-  <a href="https://star-history.com/#ayushkmr/TAccSo&Date">
-    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=ayushkmr/TAccSo&type=Date&theme=dark" onerror="this.src='https://api.star-history.com/svg?repos=ayushkmr/TAccSo&type=Date'" />
-  </a>
-</p>
-<p align="center">
-  <a href="https://trendshift.io/repositories/4685" target="_blank" style="padding: 10px;">
-    <img src="https://trendshift.io/api/badge/repositories/4685" alt="ayushkmr%2FTAccSo | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/>
-  </a>
-  <a href="https://runacap.com/ross-index/q1-24/" target="_blank" rel="noopener" style="margin-left: 20px;">
-    <img style="width: 260px; height: 56px" src="https://runacap.com/wp-content/uploads/2024/04/ROSS_badge_white_Q1_2024.svg" alt="ROSS Index - Fastest Growing Open-Source Startups in Q1 2024 | Runa Capital" width="260" height="56"/>
-  </a>
-</p>
+4. **Are you adding value?** Reflect on whether your contribution enhances the product or service. Adding something is easy, but ensuring it provides real value to the customer is more challenging. Does this work improve the customer experience or just complicate things unnecessarily?
 
----
+5. **Will this change behavior?** Consider whether the task you are working on will have a real impact. Will it alter how people use or engage with the product? If the change does not significantly affect behavior, you might need to reassess its importance.
 
-## ✨ Contributions
+6. **Is there an easier way?** Simplicity often leads to better results. Ask yourself whether there is a simpler or more efficient approach to what you are doing. Often, complex problems have simple solutions that are "good enough" for the moment.
 
-Contributions, suggestions, bug reports and fixes are welcome!
-
-For new features, components, or extensions, please open an issue and discuss before sending a PR.
-
----
-
-## 💖 This project exists in its current state thanks to all the people who contribute
-
-<a href="https://github.com/ayushkmr/TAccSo/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=ayushkmr/TAccSo" />
-</a>
+7. **What could you be doing instead?** Reflect on opportunity cost. What are you unable to focus on because of this task? In teams with limited resources, it is crucial to prioritize tasks that provide the most impact. Could your time be better spent on something else?
