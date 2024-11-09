@@ -64,30 +64,30 @@ export default defineConfig({
         maximumFileSizeToCacheInBytes: 4 * 1024 * 1024,
       },
       manifest: {
-        name: 'LibreChat',
-        short_name: 'LibreChat',
+        name: 'TAccSo',
+        short_name: 'TAccSo',
         start_url: '/',
         display: 'standalone',
         background_color: '#000000',
         theme_color: '#009688',
         icons: [
           {
-            src: '/assets/favicon-32x32.png',
+            src: '/assets/high_quality_small_icon_32x32.png',
             sizes: '32x32',
             type: 'image/png',
           },
           {
-            src: '/assets/favicon-16x16.png',
+            src: '/assets/high_quality_favicon_16x16.png',
             sizes: '16x16',
             type: 'image/png',
           },
           {
-            src: '/assets/apple-touch-icon-180x180.png',
+            src: '/assets/high_quality_large_icon_128x128.png',
             sizes: '180x180',
             type: 'image/png',
           },
           {
-            src: '/assets/maskable-icon.png',
+            src: '/assets/taccso.png',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'maskable',

@@ -13,7 +13,9 @@ services:
     restart: always
     user: "${UID}:${GID}"
     extra_hosts:
-      - "host.docker.internal:host-gateway"
+    - "host.docker.internal:host-gateway"
+    env_file:
+      - .env
     environment:
       - HOST=0.0.0.0
       - MONGO_URI=mongodb://mongodb:27017/LibreChat
@@ -22,8 +24,8 @@ services:
       - RAG_API_URL=http://rag_api:${RAG_PORT:-8000}
     volumes:
       - type: bind
-        source: ./.env
-        target: /app/.env
+        source: ./librechat.yaml
+        target: /app/librechat.yaml
       - ./images:/app/client/public/images
       - ./logs:/app/api/logs
   mongodb:
@@ -35,6 +37,8 @@ services:
       - ./data-node:/data/db
     command: mongod --noauth
   meilisearch:
+    env_file:
+      - .env
     container_name: chat-meilisearch
     image: getmeili/meilisearch:v1.7.3
     restart: always

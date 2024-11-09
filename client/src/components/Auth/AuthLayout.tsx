@@ -59,8 +59,8 @@ function AuthLayout({
     <div className="relative flex min-h-screen flex-col bg-white dark:bg-gray-900">
       <Banner />
       <BlinkAnimation active={isFetching}>
-        <div className="mt-6 h-10 w-full bg-cover">
-          <img src="/assets/logo.svg" className="h-full w-full object-contain" alt="Logo" />
+        <div className="flex justify-center mt-6 h-16 w-full bg-cover">
+          <img src="/assets/taccso_landscape.png" className="h-full bg-white object-contain rounded login-logo" alt="Logo" />
         </div>
       </BlinkAnimation>
       <DisplayError />

@@ -18,6 +18,7 @@ function SharedView() {
 
   // configure document title
   let docTitle = '';
+  console.log("my config: ", config);
   if (config?.appTitle != null && data?.title != null) {
     docTitle = `${data.title} | ${config.appTitle}`;
   } else {

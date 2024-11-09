@@ -2399,3 +2399,8 @@ button.scroll-convo {
   scale: 1;
   translate: 0;
 }
+
+.login-logo {
+  width: 14rem;
+  height: 4.4rem;
+}
