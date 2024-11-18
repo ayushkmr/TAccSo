@@ -1,6 +1,6 @@
 {
-  "name": "LibreChat",
-  "version": "v0.7.5",
+  "name": "TAccSo",
+  "version": "v0.0.1",
   "description": "",
   "workspaces": [
     "api",
@@ -67,14 +67,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/danny-avila/LibreChat.git"
+    "url": "git+https://github.com/ayushkmr/TAccSo.git"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/danny-avila/LibreChat/issues"
-  },
-  "homepage": "https://librechat.ai/",
+  "homepage": "https://taccso.com/",
   "devDependencies": {
     "@axe-core/playwright": "^4.9.1",
     "@playwright/test": "^1.38.1",
