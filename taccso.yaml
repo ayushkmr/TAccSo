@@ -1,0 +1,80 @@
+version: 0.0.1
+
+# Cache settings: Set to true to enable caching
+cache: true
+
+# Custom interface configuration
+interface:
+  # Privacy policy settings
+  privacyPolicy:
+    externalUrl: 'https://taccso.com/privacy-policies/'
+    openNewTab: true
+
+  # Terms of service
+  termsOfService:
+    externalUrl: 'https://taccso.com/tos'
+    openNewTab: true
+    modalAcceptance: true
+    modalTitle: "Terms of Service for TAccSo"
+    modalContent: |
+      # Terms and Conditions for TAccSo
+
+  endpointsMenu: true
+  modelSelect: true
+  sidePanel: true
+  presets: true
+  prompts: true
+  bookmarks: true
+  multiConvo: true
+    
+# Example Registration Object Structure (optional)
+registration:
+  socialLogins: ['google', 'openid']
+
+
+# File Upload Configuration
+fileConfig:
+  endpoints:
+    assistants:
+      fileLimit: 10
+      fileSizeLimit: 100  # Maximum size for an individual file in MB
+      totalSizeLimit: 500  # Maximum total size for all files in a single request in MB
+      supportedMimeTypes:
+        - "application/pdf"
+        - "application/msword"
+        - "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+        - "text/plain"
+    azureDocumentIntelligence:
+      disabled: false  # Ensure this endpoint is enabled for file uploads
+    default:
+      totalSizeLimit: 200
+  serverFileSizeLimit: 1000  # Global server file size limit in MB
+  avatarSizeLimit: 2  # Limit for user avatar image size in MB
+
+endpoints:
+  azureOpenAI:
+    # Original Endpoint Configuration for TAccSo (o1 models)
+    name: 'TAccSo'
+    endpointType: 'azureOpenAI'
+    titleModel: 'gpt-35-turbo'
+    titleConvo: true
+    plugins: false
+    groups:
+      # Group-level configuration for 'taccsoassistant' using o1 models
+      - group: 'taccsoassistant'
+        apiKey: '${AZURE_OPENAI_API_KEY}'
+        instanceName: 'taccsoassistant'
+        version: '2024-08-01-preview'
+        models:
+          o1-mini:
+            deploymentName: 'o1-mini'
+      # Group-level configuration for 'ayush-eastus' using o1 models
+      - group: 'ayush-eastus'
+        apiKey: '${AZURE_OPENAI_API_KEY_EASTUS}'
+        instanceName: 'ayush-m3623o5g-eastus'
+        version: '2024-08-01-preview'
+        models:
+          o1-preview:
+            deploymentName: 'o1-preview'
+          gpt-35-turbo:
+            deploymentName: 'gpt-35-turbo'
