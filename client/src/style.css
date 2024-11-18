@@ -2400,7 +2400,9 @@ button.scroll-convo {
   translate: 0;
 }
 
-.login-logo {
-  width: 14rem;
-  height: 4.4rem;
+/** Note: ensure KaTeX can spread across visible space */
+.message-content pre:has(> span.katex) {
+  overflow: visible !important;
+  height: auto !important;
+  max-height: none !important;
 }
