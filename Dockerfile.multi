@@ -1,44 +1,58 @@
 # Dockerfile.multi
-# v0.7.5
+# v0.0.1
 
-# Base for all builds
+# Base for dependency installation
 FROM node:20-alpine AS base
 WORKDIR /app
 RUN apk --no-cache add curl
 RUN npm config set fetch-retry-maxtimeout 600000 && \
     npm config set fetch-retries 5 && \
     npm config set fetch-retry-mintimeout 15000
+
+# Copy package.json files and install dependencies
 COPY package*.json ./
 COPY packages/data-provider/package*.json ./packages/data-provider/
 COPY client/package*.json ./client/
 COPY api/package*.json ./api/
-RUN npm ci
+
+RUN npm install
 
 # Build data-provider
 FROM base AS data-provider-build
 WORKDIR /app/packages/data-provider
 COPY packages/data-provider ./
 RUN npm run build
-RUN npm prune --production
 
-# Client build
+# Build client
 FROM base AS client-build
 WORKDIR /app/client
 COPY client ./
 COPY --from=data-provider-build /app/packages/data-provider/dist /app/packages/data-provider/dist
-ENV NODE_OPTIONS="--max-old-space-size=2048"
 RUN npm run build
-RUN npm prune --production
 
-# API setup (including client dist)
+# Build API
 FROM base AS api-build
 WORKDIR /app
 COPY api ./api
 COPY config ./config
 COPY --from=data-provider-build /app/packages/data-provider/dist ./packages/data-provider/dist
 COPY --from=client-build /app/client/dist ./client/dist
+
+# Install production dependencies for API
 WORKDIR /app/api
-RUN npm prune --production
+RUN npm install --production
+
+# Final image
+FROM node:20-alpine
+WORKDIR /app
+
+# Copy built artifacts from api-build stage
+COPY --from=api-build /app/api /app/api
+COPY --from=api-build /app/client/dist /app/client/dist
+COPY --from=api-build /app/packages/data-provider/dist /app/packages/data-provider/dist
+COPY config ./config
+
 EXPOSE 3080
+ENV NODE_ENV=production
 ENV HOST=0.0.0.0
-CMD ["node", "server/index.js"]
+CMD ["node", "api/server/index.js"]
