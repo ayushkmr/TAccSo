@@ -4,7 +4,7 @@ import type { ZodIssue } from 'zod';
 import type { TConversation, TSetOption, TPreset } from './schemas';
 
 export type GoogleSettings = Partial<typeof google>;
-export type OpenAISettings = Partial<typeof google>;
+export type OpenAISettings = Partial<typeof openAI>; // Fixed OpenAISettings to use openAI instead of google
 
 export type ComponentType =
   | 'input'
@@ -229,7 +229,16 @@ export function validateSettingDefinitions(settings: SettingsConfiguration): voi
     }
   }
 
-  const columns = columnsSet.size === 1 ? columnsSet.values().next().value : 2;
+  // Set a default value of 2 if no columns are defined
+  const defaultColumns = 2;
+  let effectiveColumns: number = defaultColumns;
+
+  if (columnsSet.size === 1) {
+    const value = columnsSet.values().next().value;
+    if (value !== undefined) {
+      effectiveColumns = value;
+    }
+  }
 
   for (const setting of settings) {
     for (const field of requiredSettingFields) {
@@ -317,7 +326,6 @@ export function validateSettingDefinitions(settings: SettingsConfiguration): voi
           message: `Textarea component for setting ${setting.key} must have type string.`,
           path: ['type'],
         });
-        // continue;
       }
 
       if (
@@ -330,7 +338,6 @@ export function validateSettingDefinitions(settings: SettingsConfiguration): voi
           message: `For setting ${setting.key}, minText cannot be greater than maxText.`,
           path: [setting.key, 'minText', 'maxText'],
         });
-        // continue;
       }
       if (!setting.placeholder) {
         setting.placeholder = '';
@@ -344,7 +351,6 @@ export function validateSettingDefinitions(settings: SettingsConfiguration): voi
           message: `Slider component for setting ${setting.key} must have a range if type is number.`,
           path: ['range'],
         });
-        // continue;
       }
       if (
         setting.type === SettingTypes.Enum &&
@@ -355,7 +361,6 @@ export function validateSettingDefinitions(settings: SettingsConfiguration): voi
           message: `Slider component for setting ${setting.key} requires at least ${minSliderOptions} options for enum type.`,
           path: ['options'],
         });
-        // continue;
       }
       setting.includeInput =
         setting.type === SettingTypes.Number ? setting.includeInput ?? true : false; // Default to true if type is number
@@ -378,7 +383,6 @@ export function validateSettingDefinitions(settings: SettingsConfiguration): voi
           message: `Checkbox/Switch component for setting ${setting.key} must have 1-2 options.`,
           path: ['options'],
         });
-        // continue;
       }
       if (!setting.default && setting.type === SettingTypes.Boolean) {
         setting.default = false; // Default to false if type is boolean
@@ -392,7 +396,6 @@ export function validateSettingDefinitions(settings: SettingsConfiguration): voi
           message: `Dropdown component for setting ${setting.key} requires at least ${minDropdownOptions} options.`,
           path: ['options'],
         });
-        // continue;
       }
       if (!setting.default && setting.options && setting.options.length > 0) {
         setting.default = setting.options[0]; // Default to first option if not specified
@@ -412,9 +415,9 @@ export function validateSettingDefinitions(settings: SettingsConfiguration): voi
       }
     }
 
-    // Default columnSpan
+    // Default columnSpan with guaranteed columns value
     if (!setting.columnSpan) {
-      setting.columnSpan = Math.floor(columns / 2);
+      setting.columnSpan = Math.floor(effectiveColumns / 2);
     }
 
     // Default label to key
@@ -460,7 +463,7 @@ export function validateSettingDefinitions(settings: SettingsConfiguration): voi
             code: ZodIssueCode.custom,
             message: `Setting ${setting.key} with optionType "${setting.optionType}" must match the type defined in tConversationSchema.`,
             path: ['optionType'],
-          });
+        });
         }
       }
     }
