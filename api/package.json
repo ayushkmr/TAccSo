@@ -1,6 +1,6 @@
 {
-  "name": "@librechat/backend",
-  "version": "v0.7.5",
+  "name": "@taccso/backend",
+  "version": "v0.0.1",
   "description": "",
   "scripts": {
     "start": "echo 'please run this from the root directory'",
@@ -18,21 +18,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/danny-avila/LibreChat.git"
+    "url": "git+https://github.com/ayushkmr/TAccSo.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
   "_moduleAliases": {
     "~": "."
   },
   "imports": {
     "~/*": "./*"
   },
-  "bugs": {
-    "url": "https://github.com/danny-avila/LibreChat/issues"
-  },
-  "homepage": "https://librechat.ai",
   "dependencies": {
     "@anthropic-ai/sdk": "^0.16.1",
     "@azure/search-documents": "^12.0.0",
