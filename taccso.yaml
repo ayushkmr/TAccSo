@@ -18,24 +18,6 @@ registration:
   socialLogins: ['google']
 
 
-# File Upload Configuration
-fileConfig:
-  endpoints:
-    assistants:
-      fileLimit: 10
-      fileSizeLimit: 100  # Maximum size for an individual file in MB
-      totalSizeLimit: 500  # Maximum total size for all files in a single request in MB
-      supportedMimeTypes:
-        - "application/pdf"
-        - "application/msword"
-        - "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-        - "text/plain"
-    azureDocumentIntelligence:
-      disabled: false  # Ensure this endpoint is enabled for file uploads
-    default:
-      totalSizeLimit: 200
-  serverFileSizeLimit: 1000  # Global server file size limit in MB
-  avatarSizeLimit: 2  # Limit for user avatar image size in MB
 
 endpoints:
   azureOpenAI:
@@ -245,3 +227,15 @@ modelSpecs:
           Avoid Overstepping: Do not provide definitive legal or financial advice.
           No Assumptions: Do not assume the user's knowledge level; present information that is informative and respectful of their expertise.
           Reminder: Focus solely on generating the list of action items and requests based on the provided document, ensuring all tasks are clearly assigned with appropriate deadlines. Include notes with next steps or references as needed for each action item. Always prioritize accuracy and clarity to support professionals in legal, tax, and accounting matters effectively.
+
+    - name: "advice-hub"
+      label: "Advice Hub"
+      description: "Provides expert advice on various topics"
+      iconURL: "https://raw.githubusercontent.com/ayushkmr/TAccSo/main/client/public/assets/taccso.jpg"
+      preset:
+        default: true
+        endpoint: "azureOpenAI"
+        model: "o1-mini"
+        modelLabel: "AdviceHub"
+        greeting: |
+          Welcome to the Advice Hub! How can I assist you with expert advice on your topics today?
