@@ -47,6 +47,25 @@ endpoints:
           gpt-35-turbo:
             deploymentName: 'gpt-35-turbo'
 
+fileConfig:
+  endpoints:
+    assistants:
+      fileLimit: 100
+      fileSizeLimit: 1000 # Maximum size for an individual file in MB
+      totalSizeLimit: 5000  # Maximum total size for all files in a single request in MB
+      supportedMimeTypes:
+        - "*.*"
+    openAI:
+      disabled: true  # Disables file uploading to the OpenAI endpoint
+    default:
+      totalSizeLimit: 2000
+    azureOpenAI:
+      fileLimit: 100
+      fileSizeLimit: 1000
+  serverFileSizeLimit: 1000  # Global server file size limit in MB
+  avatarSizeLimit: 10  # Limit for user avatar image size in MB
+
+
 modelSpecs:
   enforce: true
   prioritize: true
