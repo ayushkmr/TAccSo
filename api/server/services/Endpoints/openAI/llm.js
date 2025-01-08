@@ -38,6 +38,7 @@ function getLLMConfig(apiKey, options = {}) {
     dropParams,
   } = options;
 
+  /** @type {OpenAIClientOptions} */
   let llmConfig = {
     streaming,
   };
@@ -54,6 +55,7 @@ function getLLMConfig(apiKey, options = {}) {
     });
   }
 
+  /** @type {OpenAIClientOptions['configuration']} */
   const configOptions = {};
 
   // Handle OpenRouter or custom reverse proxy
@@ -62,21 +64,21 @@ function getLLMConfig(apiKey, options = {}) {
     configOptions.baseOptions = {
       headers: Object.assign(
         {
-          'HTTP-Referer': 'https://librechat.ai',
+          'HTTP-Referer': 'https://chat.taccso.com',
           'X-Title': 'TAccSo',
         },
         headers,
       ),
     };
   } else if (reverseProxyUrl) {
-    configOptions.basePath = reverseProxyUrl;
+    configOptions.baseURL = reverseProxyUrl;
     if (headers) {
-      configOptions.baseOptions = { headers };
+      configOptions.defaultHeaders = headers;
     }
   }
 
   if (defaultQuery) {
-    configOptions.baseOptions.defaultQuery = defaultQuery;
+    configOptions.defaultQuery = defaultQuery;
   }
 
   if (proxy) {
@@ -97,9 +99,9 @@ function getLLMConfig(apiKey, options = {}) {
       llmConfig.model = process.env.AZURE_OPENAI_DEFAULT_MODEL;
     }
 
-    if (configOptions.basePath) {
+    if (configOptions.baseURL) {
       const azureURL = constructAzureURL({
-        baseURL: configOptions.basePath,
+        baseURL: configOptions.baseURL,
         azureOptions: azure,
       });
       azure.azureOpenAIBasePath = azureURL.split(`/${azure.azureOpenAIApiDeploymentName}`)[0];
@@ -118,7 +120,12 @@ function getLLMConfig(apiKey, options = {}) {
     llmConfig.organization = process.env.OPENAI_ORGANIZATION;
   }
 
-  return { llmConfig, configOptions };
+  return {
+    /** @type {OpenAIClientOptions} */
+    llmConfig,
+    /** @type {OpenAIClientOptions['configuration']} */
+    configOptions,
+  };
 }
 
 module.exports = { getLLMConfig };
