@@ -59,7 +59,7 @@ const connect = require('./connect');
   try {
     await sendEmail({
       email: email,
-      subject: `Invite to join ${appName}!`,
+      subject: `Welcome to TAccSo – Your AI-Powered Finance and Accounting Assistant!`,
       payload: {
         appName: appName,
         inviteLink: inviteLink,
