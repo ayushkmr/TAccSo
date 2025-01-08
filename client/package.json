@@ -1,6 +1,6 @@
 {
-  "name": "@taccso/frontend",
-  "version": "v0.0.1",
+  "name": "@librechat/frontend",
+  "version": "v0.7.6",
   "description": "",
   "type": "module",
   "scripts": {
@@ -18,10 +18,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ayushkmr/TAccSo.git"
+    "url": "git+https://github.com/danny-avila/LibreChat.git"
   },
   "keywords": [],
-  "homepage": "https://taccso.com",
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danny-avila/LibreChat/issues"
+  },
+  "homepage": "https://librechat.ai",
   "dependencies": {
     "@ariakit/react": "^0.4.11",
     "@codesandbox/sandpack-react": "^2.18.2",
@@ -62,7 +67,7 @@
     "html-to-image": "^1.11.11",
     "image-blob-reduce": "^4.1.0",
     "js-cookie": "^3.0.5",
-    "librechat-data-provider": "^0.7.54",
+    "librechat-data-provider": "*",
     "lodash": "^4.17.21",
     "lucide-react": "^0.394.0",
     "match-sorter": "^6.3.4",
