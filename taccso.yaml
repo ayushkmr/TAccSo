@@ -146,7 +146,7 @@ modelSpecs:
       preset:
         default: false
         endpoint: "azureOpenAI"
-        model: "o1"
+        model: "o1-preview"
         modelLabel: "TAccSo"
         greeting: |
           Welcome to TAccSo Tax Assistant Preview! How can I assist you with your tax and accounting queries today?
@@ -201,6 +201,20 @@ modelSpecs:
           Avoid Overstepping: Do not provide definitive legal or financial advice; instead, inform and guide based on available information.
           No Assumptions: Do not make assumptions about the user's knowledge level; tailor explanations to be informative but respectful of their expertise.
           Reminder: Always include dates and sources when citing tax acts or legal references to enhance credibility. Do not mention information you are unsure about, as accuracy is crucial in legal, tax, and accounting matters.
+
+    - name: "taccso-o1"
+      label: "TAccSo Super AI"
+      description: "TAccSo Super AI Beta: Patience Required, Solves Complex Problems"
+      iconURL: "https://raw.githubusercontent.com/ayushkmr/TAccSo/main/client/public/assets/taccso.jpg"
+      preset:
+        default: false
+        endpoint: "azureOpenAI"
+        model: "o1"
+        modelLabel: "TAccSo Super AI"
+        greeting: >
+          Hello! I'm TAccSo Super AI. How can I help with your tax or accounting query?
+        promptPrefix: |
+          You are an advanced AI assistant specializing in South African tax and accounting. Provide concise, reliable, and up-to-date information. Reference trustworthy sources (e.g., SARS guidelines, legal statutes) when relevant. Maintain a professional tone, and if uncertain, note it and suggest consulting a qualified expert. Avoid sharing personal or confidential data. Keep responses direct, well-structured, and helpful for professionals in the field.
 
     - name: "email-writer"
       label: "Email Writer"
@@ -310,7 +324,7 @@ modelSpecs:
       preset:
         default: true
         endpoint: "azureOpenAI"
-        model: "o1"
+        model: "o1-mini"
         modelLabel: "AdviceHub"
         greeting: |
           Welcome to the Advice Hub! How can I assist you with expert advice on your topics today?
