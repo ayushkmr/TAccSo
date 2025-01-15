@@ -36,6 +36,8 @@ endpoints:
         models:
           o1-mini:
             deploymentName: 'o1-mini'
+          gpt-4o-mini:
+            deploymentName: 'gpt-4o-mini'
       # Group-level configuration for 'ayush-eastus' using o1 models
       - group: 'ayush-eastus'
         apiKey: '${AZURE_OPENAI_API_KEY_EASTUS}'
@@ -46,6 +48,8 @@ endpoints:
             deploymentName: 'o1-preview'
           gpt-35-turbo:
             deploymentName: 'gpt-35-turbo'
+          gpt-4o:
+            deploymentName: 'gpt-4o'
 
 fileConfig:
   endpoints:
@@ -203,7 +207,7 @@ modelSpecs:
       preset:
         default: true
         endpoint: "azureOpenAI"
-        model: "o1-mini"  
+        model: "gpt-4o"  
         modelLabel: "EmailWriter"
         greeting: |
           Welcome to Email Writer! Please provide the context or data you have for your email, and I'll compose a clear, well-structured draft for you.
@@ -253,7 +257,7 @@ modelSpecs:
       preset:
         default: true
         endpoint: "azureOpenAI"
-        model: "o1-mini"
+        model: "gpt-4o"
         modelLabel: "ActionItem"
         greeting: |
           Welcome to the Action Item Extractor! How can I assist you with extracting action items from your documents today?
