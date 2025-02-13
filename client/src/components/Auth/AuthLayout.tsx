@@ -1,4 +1,4 @@
-import { useLocalize } from '~/hooks';
+import { TranslationKeys, useLocalize } from '~/hooks';
 import { BlinkAnimation } from './BlinkAnimation';
 import { TStartupConfig } from 'librechat-data-provider';
 import SocialLoginRender from './SocialLoginRender';
@@ -33,7 +33,7 @@ function AuthLayout({
   startupConfig: TStartupConfig | null | undefined;
   startupConfigError: unknown | null | undefined;
   pathname: string;
-  error: string | null;
+  error: TranslationKeys | null;
 }) {
   const localize = useLocalize();
 
