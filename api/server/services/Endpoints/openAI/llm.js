@@ -1,4 +1,5 @@
 const { HttpsProxyAgent } = require('https-proxy-agent');
+const { KnownEndpoints } = require('librechat-data-provider');
 const { sanitizeModelName, constructAzureURL } = require('~/utils');
 const { isEnabled } = require('~/server/utils');
 
@@ -57,19 +58,16 @@ function getLLMConfig(apiKey, options = {}) {
 
   /** @type {OpenAIClientOptions['configuration']} */
   const configOptions = {};
-
-  // Handle OpenRouter or custom reverse proxy
-  if (useOpenRouter || reverseProxyUrl === 'https://openrouter.ai/api/v1') {
-    configOptions.basePath = 'https://openrouter.ai/api/v1';
-    configOptions.baseOptions = {
-      headers: Object.assign(
-        {
+  if (useOpenRouter || (reverseProxyUrl && reverseProxyUrl.includes(KnownEndpoints.openrouter))) {
+    llmConfig.include_reasoning = true;
+    configOptions.baseURL = reverseProxyUrl;
+    configOptions.defaultHeaders = Object.assign(
+      {
           'HTTP-Referer': 'https://chat.taccso.com',
           'X-Title': 'TAccSo',
-        },
-        headers,
-      ),
-    };
+      },
+      headers,
+    );
   } else if (reverseProxyUrl) {
     configOptions.baseURL = reverseProxyUrl;
     if (headers) {
