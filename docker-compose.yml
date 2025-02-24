@@ -23,6 +23,7 @@ services:
         source: ./taccso.yaml
         target: /app/taccso.yaml
       - ./images:/app/client/public/images
+      - ./uploads:/app/uploads
       - ./logs:/app/api/logs
     extra_hosts:
       - "host.docker.internal:host-gateway"
