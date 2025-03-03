@@ -17,7 +17,27 @@ interface:
 registration:
   socialLogins: ['google']
 
-
+speech:
+  stt:
+    azureOpenAI:
+      instanceName: 'taccsoassistant'
+      apiKey: '${AZURE_OPENAI_API_KEY}'
+      deploymentName: 'whisper'
+      apiVersion: '2024-06-01'
+      languageSTT: "English (US)"
+      autoTranscribeAudio: true
+      decibelValue: -45
+      autoSendText: 1
+  tts:
+    openai:
+      apiKey: '${OPENAI_API_KEY}'
+      model: 'tts-1'
+      voice: 'shimmer'
+      voices: ['alloy', 'echo', 'fable', 'onyx', 'nova', 'shimmer']
+      languageTTS: "en"
+      automaticPlayback: true
+      playbackRate: 1.0
+      cacheTTS: true
 
 endpoints:
   azureOpenAI:
