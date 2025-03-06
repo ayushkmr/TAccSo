@@ -107,7 +107,7 @@ modelSpecs:
   list:
     - name: "taccso-deepseek"
       label: "TAccSo Deep Research"
-      description: "AI for Deep, Precise Reasoning & Problem-Solving tasks, with Internet Search, Thought Process Shown, Supports Attachments"
+      description: "AI for Deep, Precise Reasoning & Problem-Solving tasks, Thought Process Shown, Supports Attachments"
       iconURL: "https://raw.githubusercontent.com/ayushkmr/TAccSo/main/client/public/assets/taccso.jpg"
       preset:
         default: true
@@ -463,7 +463,7 @@ modelSpecs:
 
     - name: "advice-hub"
       label: "Advice Hub"
-      description: "Provides expert advice on various topics, Internet Search & Supports Attachments"
+      description: "Provides expert advice on various topics, Supports Attachments"
       iconURL: "https://raw.githubusercontent.com/ayushkmr/TAccSo/main/client/public/assets/taccso.jpg"
       preset:
         default: false
