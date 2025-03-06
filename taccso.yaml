@@ -105,17 +105,17 @@ modelSpecs:
   enforce: true
   prioritize: true
   list:
-    - name: "tax-4o"
-      label: "TAccSo Assistant"
-      description: "Swift, detailed, efficient responses, Support Attachments"
+    - name: "taccso-deepseek"
+      label: "TAccSo Deep Research"
+      description: "AI for Deep, Precise Reasoning & Problem-Solving tasks, with Internet Search, Thought Process Shown, Supports Attachments"
       iconURL: "https://raw.githubusercontent.com/ayushkmr/TAccSo/main/client/public/assets/taccso.jpg"
       preset:
         default: true
         endpoint: "azureOpenAI"
-        model: "gpt-4o"
-        modelLabel: "TAccSo"
+        model: "DeepSeek-R1"
+        modelLabel: "TAccSo Deep Researcher"
         greeting: |
-          Welcome to TAccSo Assistant! How can I assist you with your tax and accounting queries today?
+          Hello! I'm TAccSo Deep Researcher. How can I help with your tax or accounting query?
         promptPrefix: |
           You are an advanced AI assistant designed to support tax assistants, accountants, chartered accountants (CAs), lawyers, tax authorities, and other tax and accounting professionals in South Africa. Your primary goal is to provide accurate, detailed, and up-to-date information on tax laws, accounting practices, financial regulations, and related topics to assist professionals in their daily work.
 
@@ -169,17 +169,17 @@ modelSpecs:
 
           Reminder: Always include dates and sources when citing tax acts or legal references to enhance credibility. Do not mention information you are unsure about, as accuracy is crucial in legal, tax, and accounting matters.
 
-    - name: "taccso-deepseek"
-      label: "TAccSo Deep Researcher"
-      description: "TAccSo Deep Researcher: Patience Required, Solves Complex Problems, Supports Attachments"
+    - name: "tax-4o"
+      label: "TAccSo Assistant"
+      description: "Swift, detailed, efficient responses, Support Attachments"
       iconURL: "https://raw.githubusercontent.com/ayushkmr/TAccSo/main/client/public/assets/taccso.jpg"
       preset:
         default: false
         endpoint: "azureOpenAI"
-        model: "DeepSeek-R1"
-        modelLabel: "TAccSo Deep Researcher"
+        model: "gpt-4o"
+        modelLabel: "TAccSo"
         greeting: |
-          Hello! I'm TAccSo Deep Researcher. How can I help with your tax or accounting query?
+          Welcome to TAccSo Assistant! How can I assist you with your tax and accounting queries today?
         promptPrefix: |
           You are an advanced AI assistant designed to support tax assistants, accountants, chartered accountants (CAs), lawyers, tax authorities, and other tax and accounting professionals in South Africa. Your primary goal is to provide accurate, detailed, and up-to-date information on tax laws, accounting practices, financial regulations, and related topics to assist professionals in their daily work.
 
@@ -462,11 +462,11 @@ modelSpecs:
           Reminder: Focus solely on generating the list of action items and requests based on the provided document, ensuring all tasks are clearly assigned with appropriate deadlines. Include notes with next steps or references as needed for each action item. Always prioritize accuracy and clarity to support professionals in legal, tax, and accounting matters effectively.
 
     - name: "advice-hub"
-      label: "Advice Hub"
-      description: "Provides expert advice on various topics, Supports Attachments"
+      label: "taccso-deepseek"
+      description: "Provides expert advice on various topics, Internet Search & Supports Attachments"
       iconURL: "https://raw.githubusercontent.com/ayushkmr/TAccSo/main/client/public/assets/taccso.jpg"
       preset:
-        default: true
+        default: false
         endpoint: "azureOpenAI"
         model: "gpt-4o"
         modelLabel: "AdviceHub"
