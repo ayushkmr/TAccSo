@@ -462,13 +462,13 @@ modelSpecs:
           Reminder: Focus solely on generating the list of action items and requests based on the provided document, ensuring all tasks are clearly assigned with appropriate deadlines. Include notes with next steps or references as needed for each action item. Always prioritize accuracy and clarity to support professionals in legal, tax, and accounting matters effectively.
 
     - name: "advice-hub"
-      label: "taccso-deepseek"
+      label: "Advice Hub"
       description: "Provides expert advice on various topics, Internet Search & Supports Attachments"
       iconURL: "https://raw.githubusercontent.com/ayushkmr/TAccSo/main/client/public/assets/taccso.jpg"
       preset:
         default: false
         endpoint: "azureOpenAI"
-        model: "gpt-4o"
+        model: "DeepSeek-R1"
         modelLabel: "AdviceHub"
         greeting: |
           Welcome to the Advice Hub! How can I assist you with expert advice on your topics today?
