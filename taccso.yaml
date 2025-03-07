@@ -81,6 +81,13 @@ endpoints:
         serverless: true
         models:
           DeepSeek-R1: true
+      - group: 'DeepSeek-v3'
+        apiKey: '${AZURE_DEEPSEEK_API_KEY}'
+        baseURL: 'https://DeepSeek-V3.eastus2.models.ai.azure.com/v1/'
+        serverless: true
+        models:
+          DeepSeek-V3: 
+            deploymentName: DeepSeek-V3
 
 fileConfig:
   endpoints:
